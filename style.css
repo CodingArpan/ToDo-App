@@ -1,0 +1,263 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+body {
+    background: #f3945d;
+    padding: 10px;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    margin-top: 20px
+}
+
+.underline {
+    width: 50px;
+    height: 3px;
+    background: rgb(255, 255, 255);
+    margin: 20px auto;
+
+
+}
+
+.addtask {
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.addtask>input {
+    width: 100%;
+    margin: auto;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 100px;
+    outline: none;
+    border: none;
+}
+
+textarea {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    max-width: 100%;
+}
+
+#idno{
+    display: none;
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn {
+    appearance: none;
+    background-color: #000000;
+    border: 2px solid #1A1A1A;
+    border-radius: 100px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    margin: 20px 10px;
+    min-height: 30px;
+    min-width: 0;
+    outline: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 100px;
+    will-change: transform;
+}
+
+.btn:disabled {
+    pointer-events: none;
+}
+
+.btn:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+}
+
+.btn:active {
+    box-shadow: none;
+    transform: translateY(0);
+}
+
+button.btn.addnew{
+    display: block;
+    
+}
+button.btn.save{
+    display: none;
+    
+}
+button.btn.cancel{
+    display: none;
+    
+}
+
+.viewtask {
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+
+}
+
+
+.access {
+    position: sticky;
+    left: 0;
+    top: 0;
+    background: #1f1e1e;
+    width: 100%;
+    font-size: 20px;
+    color: rgb(145, 143, 143);
+    padding: 8px 20px;
+    border-radius: 20px 20px 0 0;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.access>input {
+    display: none;
+}
+
+.access>label {
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+}
+
+.alltasks {
+    padding-top: 10px;
+    color: #FFFFFF;
+    background: rgb(245, 244, 244);
+    position: relative;
+    display: flex;
+    width: 200%;
+    left: 0;
+    transition: all 0.5s cubic-bezier(0.38, -0.02, 0.32, 0.95) 0s;
+}
+
+.alltasks>.list {
+    padding: 0 10px;
+    width: 100%;
+    background: rgb(245, 244, 244);
+    border-left: 3px solid black;
+}
+.alltasks h1{
+    color:#000000;
+}
+
+#incomplete:checked~label[for="incomplete"] {
+    color: #ffffff;
+}
+
+#completed:checked~label[for="completed"] {
+    color: #ffffff;
+}
+
+.tasktitle {
+    font-size: 20px;
+    text-transform: capitalize;
+    line-height: 30px;
+    color: #222121;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    margin-bottom: 5px;
+}
+
+.tasktitle::before {
+    content: '+ ';
+    font-size: 25px;
+
+}
+
+.taskdescrip {
+    color: #979494;
+    text-transform: lowercase;
+
+}
+
+
+
+.allbuttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+}
+
+.icons {
+    padding:8px 10px;
+    font-size: 20px;
+    color: rgb(32, 32, 32);
+    transition: all 0.2s linear 0s;
+    cursor: pointer;
+}
+.icons.edit{
+    background: rgb(113, 89, 250);
+    color: #ffffff;
+    border-radius: 5px;
+    margin: 10px 5px;
+}
+.icons.dalete{
+    background: rgb(247, 80, 74);
+    color: #ffffff;
+    border-radius: 5px;
+    margin: 10px 5px;
+}
+.icons.completed{
+    background: rgb(49, 49, 49);
+    color: #ffffff;
+    border-radius: 5px;
+    margin: 10px 5px;
+}
+.icons.redo{
+    background: rgb(49, 49, 49);
+    color: #ffffff;
+    border-radius: 5px;
+    margin: 10px 5px;
+}
+
+.icons:hover {
+    color: rgb(0, 0, 0);
+    background: rgb(252, 252, 252);
+
+}
+
+.incompletetasks {
+    /* background: rgb(126, 188, 245); */
+}
+
+.completedtasks {
+    /* background: rgb(223, 243, 107); */
+}

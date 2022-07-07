@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>ToDo App</title>
+	<Link href="style.css" rel="stylesheet" type="text/css" media="all" />
+	<script src="https://kit.fontawesome.com/d7dbad12de.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+	<h1>Add ToDo List</h1>
+	<div class="underline"></div>
+
+	<div class="addtask">
+
+		<input type="text" name="tasktitle" placeholder="Add Task Title" id="tasktitle" required>
+
+		<textarea rows="5" cols="10" type="text" name="taskdescription" placeholder="Add Task Description" id="taskdescription" required></textarea>
+
+		<input type="text" name="idno" id="idno">
+
+		<div class="buttons">
+			<button class="btn addnew" type="submit">Add +</button>
+			<button class="btn save" type="submit">Save</button>
+			<button class="btn cancel" type="submit">Cancel</button>
+		</div>
+	</div>
+
+	<div class="viewtask">
+
+
+
+		<div class="access">
+			<input checked type="radio" name="taskstatus" id="incomplete" />
+			<input type="radio" name="taskstatus" id="completed" />
+
+			<label for="incomplete">Task List</label>
+			<label for="completed">Completed</label>
+
+
+		</div>
+
+		<div class="alltasks">
+
+			<div class="list incompletetasks">
+				<!-- <div class="task" data-taskid="abc">
+					<div class="tasktitle">Lorem ipsum dolor sit</div>
+					<div class="taskdescrip">dsfsfsfsfsfsfsfsfsfsfsfsfsfsfsfsfsf</div>
+					<div class="allbuttons">
+						<div class="icons edit" ><i class="fas fa-pen-square"></i></div>
+						<div class="icons dalete"><i class="fas fa-trash"></i></div>
+						<div class="icons completed"><i class="fas fa-check-square"></i></div>
+					</div>
+				</div> -->
+
+			</div>
+
+			<div class="list completedtasks">
+				<!-- <div class="task" data-taskid="abc">
+					<div class="tasktitle">sdaaaaaaaaaa</div>
+					<div class="taskdescrip">sdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsd</div>
+					<div class="allbuttons">
+						<div class="icons edit"><i class="fas fa-pen-square"></i></div>
+						<div class="icons dalete"><i class="fas fa-trash"></i></div>
+						<div class="icons redo"><i class="fas fa-redo"></i></div>
+					</div>
+				</div> -->
+
+			</div>
+
+		</div>
+	</div>
+
+	<script src="script.js" type="text/javascript"></script>
+
+</body>
+
+</html>
